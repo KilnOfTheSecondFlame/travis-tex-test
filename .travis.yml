@@ -5,10 +5,10 @@ sudo: false
 install:
   - cp -n texlive* /tmp/
   - source /tmp/texlive_install.sh
-  - tlmgr install /
-      koma-script /
-      etoolbox /
-      logreq /
+  - tlmgr install \
+      koma-script \
+      etoolbox \
+      logreq \
       biblatex-apa
 
 cache:
