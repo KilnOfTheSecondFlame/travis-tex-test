@@ -6,3 +6,17 @@ The goal was to provide a minimal installation script which preinstalls TeXLive,
 1. Fork / Copy the files
 2. Add the repo to Travis in the console
 3. Commit
+
+# Error troubleshooting in Travis
+By far the easiest way is to look for the missing file in tlmgr and then adding the package containing the .sty/file to the travis script.
+```bash
+tlmgr search --global -all <filename here>*
+```
+```yaml
+...
+install:
+  - 
+  [...]
+  - tlmgr install [...] new_package
+...
+```
