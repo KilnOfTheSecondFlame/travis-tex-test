@@ -1,0 +1,23 @@
+dist: trusty
+language: tex
+sudo: false
+
+install:
+  - cp -n texlive* /tmp/
+  - source /tmp/texlive_install.sh
+  - tlmgr install /
+      koma-script /
+      etoolbox /
+      logreq /
+      biblatex-apa
+
+cache:
+  directories:
+    - /tmp/texlive
+    - $HOME/.texlive
+
+script:
+  - pdflatex -interaction=nonstopmode -halt-on-error *.tex
+  - biber *.bcf
+  - pdflatex -interaction=nonstopmode -halt-on-error *.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error *.tex

@@ -1,0 +1,36 @@
+\documentclass[a4paper]{scrreprt}
+
+% add unicode support and use german as language
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{graphicx}
+
+\usepackage{amssymb}
+
+% Bibliography & citing
+\usepackage[
+	backend=biber,
+	style=apa,
+	bibstyle=apa,
+	citestyle=apa,
+	sortlocale=de_DE
+	]{biblatex}
+\addbibresource{Referenzen.bib}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+
+\title{Test}
+\author{Pascal Baumann}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\end{abstract}
+
+Dies ist ein minimales Dokument um die Travis Biber Funktionalität zu testen \parencite{Baumann2019}.
+
+\begin{figure}[h!]
+	\includegraphics{./Test.png}
+\end{figure}
+
+\end{document}          
