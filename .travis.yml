@@ -3,7 +3,7 @@ language: tex
 sudo: false
 
 env:
-  - TEX_NAME=Test.tex
+  - DOCUMENT_NAME=Test
 
 install:
   - cp -n texlive* /tmp/
@@ -16,7 +16,7 @@ cache:
     - $HOME/.texlive
 
 script:
-  - pdflatex -interaction=nonstopmode -halt-on-error $TEX_NAME
+  - pdflatex -interaction=nonstopmode -halt-on-error ${DOCUMENT_NAME}.tex
   - biber *.bcf
-  - pdflatex -interaction=nonstopmode -halt-on-error $TEX_NAME
-  - pdflatex -interaction=nonstopmode -halt-on-error $TEX_NAME
+  - pdflatex -interaction=nonstopmode -halt-on-error ${DOCUMENT_NAME}.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error ${DOCUMENT_NAME}.tex
