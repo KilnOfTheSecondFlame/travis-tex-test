@@ -6,11 +6,9 @@
 |-------------------------------------------------------|
 | [![Travis build history][travis-history]][travis-url] |
 
-[repository-name]: travis-tex-test
-[org-name]: KilnOfTheSecondFlame
-[travis-url]: https://travis-ci.org/[org-name]/[repository-name]
-[travis-badge]: https://travis-ci.org/[org-name]/[repository-name].svg?branch=master
-[travis-history]: https://buildstats.info/travisci/chart/[org-name]/[repository-name]?branch=master&includeBuildsFromPullRequest=false
+[travis-url]: https://travis-ci.org/KilnOfTheSecondFlame/travis-tex-test
+[travis-badge]: https://travis-ci.org/KilnOfTheSecondFlame/travis-tex-test.svg?branch=master
+[travis-history]: https://buildstats.info/travisci/chart/KilnOfTheSecondFlame/travis-tex-test?branch=master&includeBuildsFromPullRequest=false
 
 
 # Travis CI TeX test repository
