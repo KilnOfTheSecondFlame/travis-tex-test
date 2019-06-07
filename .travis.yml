@@ -2,6 +2,9 @@ dist: trusty
 language: tex
 sudo: false
 
+env:
+  - TEX_NAME=Test.tex
+
 install:
   - cp -n texlive* /tmp/
   - source /tmp/texlive_install.sh
@@ -13,7 +16,7 @@ cache:
     - $HOME/.texlive
 
 script:
-  - pdflatex -interaction=nonstopmode -halt-on-error *.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error $TEX_NAME
   - biber *.bcf
-  - pdflatex -interaction=nonstopmode -halt-on-error *.tex
-  - pdflatex -interaction=nonstopmode -halt-on-error *.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error $TEX_NAME
+  - pdflatex -interaction=nonstopmode -halt-on-error $TEX_NAME
